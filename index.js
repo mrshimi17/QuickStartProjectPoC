@@ -97,4 +97,21 @@ function makeid() {
   return text;
 }
 // Start the server on port 8080
-app.listen(8080)
+//app.listen(8080)
+
+var http = require('https')
+  , PORT = 8080;
+
+
+function handleRequest( request, response ){
+    response.end( 'It Works!' );
+}
+
+var server = http.createServer( handleRequest );
+
+server.listen( PORT, "quickstart.hcl.com", 34, function(){
+	// Start the server on port 8080
+	app.listen(443)
+  	console.log( "Server listening on port:%s", PORT );
+});
+
