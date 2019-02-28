@@ -5,11 +5,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Hello</title>
+	<title>QuickStart</title>
 </head>
 
 <body>
-<p id = "demo">Process completed by user: </p> <p id="user_name"></p>
+<p id = "demo">Project Launched successfully. User: </p> <p id="user_name"></p>
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
@@ -17,13 +17,5 @@
 	const token = query.split('loginName=')[1]
       	var finalToke = "token 1" + token;
 	document.getElementById("user_name").innerHTML = token;
-//function writeResponse(data) {
-//var fs = require('fs')
-//
-//fs.writeFile('temp.txt', data, function(err, data){
-//    if (err) console.log(err);
-//    console.log("Successfully Written to File.");
-//});
-//}
 </script>
 </html>

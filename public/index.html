@@ -4,15 +4,64 @@
 <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Node oAuth2 Example</title>
+        <title>QuickStart</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
         <!-- <script src="main.js"></script> -->
 </head>
+<script> 
+   function clickAndDisable(link) {
+    document.getElementById('launchproject').className = "button inactive";
+    document.getElementById("finalMessage").innerHTML = "Please wait project launch is in progress...";
+	 // disable subsequent clicks
+    link.style.className='button inactive';
+    //link.style.color='blue'; 
+    link.onclick = function(event) {
+        event.preventDefault();
+     }
+   }   
+</script>
 
+<style>
+.button {
+  font: bold 25px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);  
+  color: #333333;
+  padding: 20px 20px 20px 20px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+.h1tag {
+  font: bold 15px Arial;
+  text-decoration: none;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  color: #333333;
+}
+
+
+.active {
+  background-color: #8cc0e2 !important;
+}
+
+.inactive {
+  background-color: #EEEEEE !important;
+}
+
+</style>
 <body>
-       <!--<a href="https://github.com/login/oauth/authorize?client_id=d264595e7fa5d34ec35c&scope=user%20repo&redirect_uri=http://localhost:8080/oauth/redirect">Login with github</a>-->
-<a href="https://github.com/login/oauth/authorize?client_id=9cacb3bc32ff12c05244&scope=user%20repo&redirect_uri=http://quickstart.hcl.com:443/createApp">Login with github</a>	
+    <h1 id="finalMessage" class="h1tag"></h1>
+<a id="launchproject" href="https://github.com/login/oauth/authorize?client_id=9cacb3bc32ff12c05244&scope=user%20repo&redirect_uri=http://quickstart.hcl.com:443/createApp" class="button active" onclick="clickAndDisable(this);">Launch Project</a>	
 </body>
 
 </html>
