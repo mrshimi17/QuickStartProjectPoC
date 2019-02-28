@@ -57,7 +57,6 @@ app.get('/createApp', (req, res) => {
 			//console.log("Command to Execute: " + command);
         		shell.exec(command);
 			console.log("Task completed");
-      			//res.redirect(`/welcome.html?loginName=${loginName}`)
 
 			var bodyData = "{\"name\":\"web\",\"active\":true,\"events\":[\"push\",\"pull_request\"],\"config\":{\"url\":\"http://192.168.1.3:8082/web-hook\",\"content_type\":\"json\"}}";
 			
