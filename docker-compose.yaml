@@ -1,0 +1,25 @@
+version: "3.1"
+services:
+  
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8081:80"
+    depends_on:
+      - jenkins
+      - nodejs
+  nodejs:
+    image: my_image:latest
+    environment: 
+      NODE_ENV: production
+    ports:
+      - "8080:80"
+    restart: always
+    working_dir: /home/QuickStartProjectPoC
+    command: ["node", "index.js"]
+    depends_on:
+      - jenkins
+  jenkins:
+    image: jenkins/jenkins
+    ports:
+     - "8082:80"

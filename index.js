@@ -103,6 +103,7 @@ var server = http.createServer( handleRequest );
 server.listen( PORT, "quickstart.hcl.com", 34, function(){
 	// Start the server on port 8080
 	app.listen(443)
-  	console.log( "Server listening on port:%s", PORT );
+  	console.log( "Node Server listening on port:%s", PORT );
+
 });
 
