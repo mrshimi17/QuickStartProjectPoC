@@ -17,7 +17,7 @@ services:
     depends_on:
       - jenkins
   jenkins:
-    image: jenkins/jenkins
+    image: mrshimpi17/jenkins
     networks:
       - network_quickstart
     ports:
