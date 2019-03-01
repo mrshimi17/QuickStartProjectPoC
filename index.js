@@ -36,7 +36,7 @@ app.get('/createApp', (req, res) => {
 		var loginName = "Undefined";
     		var finalToke = "token " + accessToken
     		var repoName = "Test"+makeid();
-   		var bodyData = "{\"name\": \""+repoName+"\",\"description\":\"This is a repo created through automation: "+repoName+"\",\"homepage\": \"https://github.com\",\"auto_init\":true, \"private\": true}";
+   		var bodyData = "{\"name\": \""+repoName+"\",\"description\":\"This is a repo created through automation: "+repoName+"\",\"homepage\": \"https://github.com\",\"auto_init\":true, \"private\": false}";
 
     		console.log(" String: " + bodyData + " :: " + finalToke);
 		var head =  {
