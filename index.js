@@ -89,21 +89,21 @@ function makeid() {
 }
 
 // Start the server on port 8080
-//app.listen(8080)
+app.listen(8080)
 
-var http = require('https')
-  , PORT = 8080;
+//var http = require('https')
+//  , PORT = 8080;
 
-function handleRequest( request, response ){
-    response.end( 'It Works!' );
-}
+//function handleRequest( request, response ){
+//    response.end( 'It Works!' );
+//}
 
-var server = http.createServer( handleRequest );
+//var server = http.createServer( handleRequest );
 
-server.listen( PORT, "quickstart.hcl.com", 34, function(){
+//server.listen( PORT, "quickstart.hcl.com", 34, function(){
 	// Start the server on port 8080
-	app.listen(443)
-  	console.log( "Node Server listening on port:%s", PORT );
+//	app.listen(443)
+//  	console.log( "Node Server listening on port:%s", PORT );
 
-});
+//});
 

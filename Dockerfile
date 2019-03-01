@@ -13,6 +13,6 @@ RUN echo "CurrentDirectory" ; pwd
 RUN git status
 RUN git pull
 RUN npm install -g node-gyp
-RUN ["/bin/bash", "-c", "echo hello all in one string"]
-RUN python -m site
 RUN npm install
+EXPOSE 8080
+CMD [ "node", "index.js" ]
