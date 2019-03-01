@@ -20,8 +20,10 @@ services:
     image: mrshimpi17/jenkins
     networks:
       - network_quickstart
+    volumes:
+      - "./QuickStartPipeline:/var/jenkins_home/jobs/QuickStartPipeline/:rw"
     ports:
       - 8081:8080
       - 50000:50000
 networks:
- network_quickstart:
+  network_quickstart:
