@@ -53,7 +53,7 @@ app.get('/createApp', (req, res) => {
                 	//console.log(response.data.owner.login);
         	
 			const shell = require('shelljs');
-			var command = __dirname+ '/RepoOperations.sh '+clone_url +' ' + repo_name;
+			var command = __dirname+ '/RepoOperations.sh '+clone_url +' ' + repo_name + ' ' + loginName + ' ' + accessToken ;
 			//console.log("Command to Execute: " + command);
         		shell.exec(command);
 			console.log("Task completed");

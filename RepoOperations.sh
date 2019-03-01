@@ -21,4 +21,4 @@ cd tmp/$2
 sed -i '' -e 's|${REPO_PATH}|'$1'|g' Jenkinsfile
 git add */.*
 git commit -m 'Initializing repo with hello-world repo files'
-git push origin master
+echo "Pushing Changes: " ; git push https://$3:$4@github.com/$3/$2 --all
