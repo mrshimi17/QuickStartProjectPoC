@@ -18,6 +18,7 @@ services:
       - "8080:8080"
     restart: always
     working_dir: /home/QuickStartProjectPoC
+    command: ["node", "index.js"]
     depends_on:
       - jenkins
   jenkins:
